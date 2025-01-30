@@ -27,7 +27,7 @@ function App() {
 
       try {
         const response = await axios.post(
-          'https://[YOUR_CLOUD_RUN_URL]/process',
+          'https://stutter-assist-backend-production.up.railway.app/process',
           formData
         );
         const audioUrl = URL.createObjectURL(new Blob([response.data], { type: 'audio/wav' }));
